@@ -1,0 +1,8 @@
+4. My Questions for You
+Before we finalize the presentation, I have a few questions to sharpen the plan:
+
+The "Sync" Leak: Are there any internal libraries or proprietary SDKs used in this service that do not support async? (e.g., an old Auth SDK or a custom encryption library).
+
+Concurrency Limits: Does the Wealth AI Query Service hit third-party LLM APIs? If so, have you planned for Async Semaphores to prevent hitting rate limits too fast once the Flask "bottleneck" is removed?
+
+Deployment: You mentioned Uvicorn. Will you be using Gunicorn as a process manager with Uvicorn workers (uvicorn.workers.UvicornWorker) to handle process signals and restarts?
